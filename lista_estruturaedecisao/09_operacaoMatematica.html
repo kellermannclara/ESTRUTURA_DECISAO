@@ -1,0 +1,55 @@
+<script>
+    /*
+    PROBLEMA: OPERAÇÃO MATEMÁTICA
+    Faça um script que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
+    - par ou ímpar;
+    - positivo ou negativo;
+    - inteiro ou decimal.
+    */
+
+    //ENTRADA
+
+    let numeroUm = Number (prompt(`Informe o primeiro número`));
+    let numeroDois = Number(prompt(`Informe o segundo número`));
+    let operacao = prompt (`Informe qual operção você deseja realizar.`);
+
+    //PROCESSAMENTO
+
+    let mensagem = `O resultado da sua operação é `;
+    let resultado;
+    if ((operacao === `Adição`) || (operacao === `adição`)) {
+        resultado = (numeroUm + numeroDois);
+        mensagem = mensagem + resultado + `, `;
+    } else if ((operacao === `Multiplicação`) || (operacao === `multiplicação`)) {
+        resultado = (numeroUm * numeroDois);
+        mensagem = mensagem + resultado + `, `;
+    } else if ((operacao === `Subtração`) || (operacao === `subtração`)) {
+        resultado = (numeroUm - numeroDois);
+        mensagem = mensagem + resultado + `, `;
+    } else if ((operacao === `Divisão`) || (operacao === `divisão`)) {
+        resultado = (numeroUm / numeroDois);
+        mensagem = mensagem + resultado + `, `;
+    } else {
+        alert(`Não foi possivel realizar a operção. Verifique se você escreveu corretamente o nome da operação e colocou números.`);
+    }
+    if (resultado % 2 === 0) {
+        mensagem = mensagem + `seu resutado é par, `;
+    } else {
+        mensagem = mensagem + `seu resutado é ímpar, `;
+    }
+    if (resultado >= 0) {
+        mensagem = mensagem + `positivo e `;
+    } else {
+        mensagem = mensagem + `negativo e `;
+    }
+    if (Number.isInteger(resultado)) {
+        mensagem = mensagem + `inteiro`;
+    } else {
+        mensagem = mensagem + `decimal`;
+    }
+
+    
+    //SAÍDA
+    alert(mensagem);
+
+</script>
