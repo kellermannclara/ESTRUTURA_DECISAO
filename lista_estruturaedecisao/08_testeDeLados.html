@@ -2,16 +2,16 @@
     /*
     PROBLEMA: TESTA LADOS DE TRIÂNGULO
     Receba os três lados de um triângulo. Informe se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno. Dica: pesquise sobre a regra para saber se os lados formam um triângulo e também sobre os tipos de triângulos.
-    */    
-   
+    */
+
     //ENTRADA
 
-    let ladoUm =Number (prompt (`Informe o primeiro lado do triângulo`));
-    let ladoDois =Number (prompt (`Informe o segundo lado do triângulo`));
-    let ladoTres =Number (prompt (`Informe o terceiro lado do triângulo`));
-    
+    let ladoUm = Number(prompt(`Informe o primeiro lado do triângulo`));
+    let ladoDois = Number(prompt(`Informe o segundo lado do triângulo`));
+    let ladoTres = Number(prompt(`Informe o terceiro lado do triângulo`));
+
     //PROCESSAMENTO
-    
+
     if ((ladoUm + ladoDois > ladoTres) && (ladoDois + ladoTres > ladoUm) && (ladoTres + ladoUm > ladoDois)) {
         alert(`Essas medidas formam um triângulo!`);
     } else {
@@ -19,14 +19,14 @@
     }
     if ((ladoUm === ladoDois) && (ladoDois === ladoTres) && (ladoUm === ladoTres)) {
         document.write(`Essas medidas podem formar um triângulo equilátero!`)
-    } else if ((ladoUm !== ladoDois) && (ladoDois !== ladoTres) && (ladoUm !== ladoTres)){
+    } else if ((ladoUm !== ladoDois) && (ladoDois !== ladoTres) && (ladoUm !== ladoTres)) {
         document.write(`Essas medidas podem formar um triângulo escaleno!`)
 
     } else {
-        document.write(`Essas medidas formam um triângulo isóseles`)
+        document.write(`Essas medidas formam um triângulo isóseles`);
 
     }
-    
+
     //SAÍDA
 
 </script>

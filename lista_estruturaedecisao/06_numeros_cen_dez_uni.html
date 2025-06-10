@@ -16,12 +16,61 @@
 
     //PROCESSAMENTO
 
-    let centenas = (numero / 100);
-    let dezenas = ((numero % 100) / 10);
-    let unidades = numero % 10;
+    if (numero >= 0 && numero < 1000) {
+        let centenas = Math.floor(numero / 100);
+        let dezenas = Math.floor((numero % 100) / 10);
+        let unidades = numero % 10;
+        let partes = 0
 
-    let partes
-    
+        if (centenas > 0) partes++;
+        if (dezenas > 0) partes++;
+        if (unidades > 0) partes++;
+        let mensagem = `${numero} = `
+
+        if (centenas > 1) {
+            partes--;
+            mensagem = mensagem + `${centenas} centenas`;
+            if (partes >= 2) mensagem = mensagem + `, `;
+            else if (partes == 1) mensagem = mensagem + ` e `;
+        }
+        if (centenas == 1) {
+            partes--;
+            mensagem = mensagem + `${centenas} centena`
+            if (partes >= 2) mensagem = mensagem + `, `;
+            else if (partes == 1) mensagem = mensagem + ` e `;
+        }
+        if (dezenas > 1) {
+            partes--;
+            mensagem = mensagem + `${dezenas} dezenas`
+            if (partes >= 2) mensagem = mensagem + `, `;
+            else if (partes == 1) mensagem = mensagem + ` e `;
+        }
+        if (dezenas == 1) {
+            partes--;
+            mensagem = mensagem + `${dezenas} dezena`
+            if (partes >= 2) mensagem = mensagem + `, `;
+            else if (partes == 1) mensagem = mensagem + ` e `;
+        }
+        if (unidades > 1) {
+            partes--;
+            mensagem = mensagem + `${unidades} unidades`;
+            if (partes >= 2) mensagem = mensagem + `, `;
+            else if (partes == 1) mensagem = mensagem + ` e `;
+        }
+        if (unidades == 1) {
+            partes--;
+            mensagem = mensagem + `${unidades} unidades`;
+            if (partes >= 2) mensagem = mensagem + `, `;
+            else if (partes == 1) mensagem = mensagem + ` e `;
+        }
+        alert(mensagem);
+
+    } else {
+        alert(`Número invalido. Digite um numero entre 1 e 999.`);
+    }
+
     //SAÍDA
+
+    
 
 </script>

@@ -15,10 +15,37 @@
 
     //ENTRADA
 
+    const litros = Number(prompt(`Quantos litros de combustível você comprou (em número)`));
+    const combustivel = prompt(`Qual foi o tipo de combustível comprado (digite "A" para álcool e "G" para gasolina)`);
+
 
     //PROCESSAMENTO
 
-    
+    let precoTotal;
+    let desconto;
+
+    if (combustivel == `A`) {
+        precoTotal = (litros * 6.10);
+    } else if (combustivel == `G`) {
+        precoTotal = (litros * 6.50);
+    } else {
+        alert(`Valor inválido. Certifique-se de escrever corretamente "A" ou "G".`);
+    }
+    if (litros <= 20) {
+        desconto = ((precoTotal * 3) / 100);
+    } else if (litros > 20) {
+        desconto = ((precoTotal * 5) / 100);
+    } else if (litros <= 20) {
+        desconto = ((precoTotal * 4) / 100);
+    } else if (litros > 20) {
+        desconto = ((precoTotal * 6) / 100);
+    } else {
+        alert(`Valor inválido. Certifique-se que escreveu apenas números na hora de informar qunatos litro você comprou.`);
+    }
+
+
     //SAÍDA
+
+    document.write(`O valor a ser pago será de R$${desconto}.`);
 
 </script>
