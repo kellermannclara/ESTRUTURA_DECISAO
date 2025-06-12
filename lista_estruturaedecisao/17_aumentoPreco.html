@@ -11,10 +11,32 @@
 
     //ENTRADA
 
+    const preco = Number(prompt(`Informe o preço do produto.`));
     
     //PROCESSAMENTO
 
+    let aumento
+    let novoPreco
+
+    if (preco <= 280) {
+        aumento = ((preco * 20) / 100);
+        novoPreco = preco + aumento;
+    } else if (preco <= 700) {
+        aumento = ((preco * 15) / 100);
+        novoPreco = preco + aumento;
+    } else if (preco <= 1500) {
+        aumento = ((preco * 10) / 100);
+        novoPreco = preco + aumento;
+    } else if (preco > 1500) {
+        aumento = ((preco * 5) / 100);
+        novoPreco = preco + aumento;
+    } else {
+        alert(`Valor inválido, escreva apenas números`);
+    }
     
+    let mensagemFinal = `O preço do produto após o aumento será de ${novoPreco} `;
     //SAÍDA
+
+    alert(mensagemFinal);
 
 </script>
