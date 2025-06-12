@@ -9,12 +9,24 @@
     - cães grandes: fator 7.
     */
 
-    //ENTRADA
+    // ENTRADA
+    let idadeCachorro = Number(prompt("Digite a idade do seu cão em anos:"));
+    let porte = prompt("Digite o porte do cão (pequeno, médio ou grande):");
 
-    
-    //PROCESSAMENTO
+    // PROCESSAMENTO
+    let fator;
+    if (porte === "pequeno") {
+        fator = 5;
+    } else if (porte === "médio" || porte === "médio") {
+        fator = 6;
+    } else if (porte === "grande") {
+        fator = 7;
+    } else {
+        alert(`Porte inválido. Use: pequeno, médio ou grande.`);
+    }
 
-    
-    //SAÍDA
+    let idadeHumana = idadeCachorro * fator;
 
+    // SAÍDA
+    alert(`A idade do seu cão em anos humanos é aproximadamente: ${idadeHumana} anos.`);
 </script>
