@@ -7,9 +7,18 @@
 
     //ENTRADA
 
+    const nota1 = Number(prompt(`Informe a nota antes da ajuda do BB`));
+    const nota2 = Number(prompt(`Infoorme a nota depois da ajuda do BB`));
     
     //PROCESSAMENTO
     
+    if (nota1 < nota2) {
+        const melhoria = (nota2 - nota1);
+        const acrescimo = melhoria * (1/4);
+        document.write(`O BB receberá um acrescimo de ${acrescimo} na nota`);
+    } else {
+        alert(`O BB não receberá acrescimo pois a nota do LB diminuiu`);
+    }
     
     //SAÍDA
 

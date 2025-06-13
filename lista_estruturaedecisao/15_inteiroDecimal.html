@@ -7,9 +7,15 @@
 
     //ENTRADA
 
+    const numero = Number(prompt(`Informe um número`));
 
     //PROCESSAMENTO
 
+    if (Number.isInteger(numero / 1)) {
+        alert(`O número é inteiro`);
+    } else {
+        alert(`O número é decimal`);
+    }
     
     //SAÍDA
 
